@@ -4,12 +4,11 @@ def convert_to_int(str)
   begin
     Integer(str)
   #return nil if it's an error
-rescue ArgumentError => e
+  rescue ArgumentError => e
     nil
   end
 end
 
-# def
 
 # PHASE 3
 # FRUITS = ["apple", "banana", "orange"]
@@ -36,9 +35,12 @@ end
 # PHASE 4
 class BestFriend
   def initialize(name, yrs_known, fav_pastime)
-    @name = name
-    @yrs_known = yrs_known
-    @fav_pastime = fav_pastime
+      @name = name
+      raise "Your friend needs a name!" if @name.empty?
+      @yrs_known = yrs_known
+      raise "Years known must be greater than 5 to be a friend" if @yrs_known < 5
+      @fav_pastime = fav_pastime
+      raise "You're missing a favorite past time" if @fav_pastime.empty?
   end
 
   def talk_about_friendship
