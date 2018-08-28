@@ -12,15 +12,16 @@ end
 
 # PHASE 3
 # FRUITS = ["apple", "banana", "orange"]
+#creating a message for the errors
 class CoffeeError < StandardError
   def message
-    'I cannot take more caffeine! GIVE ME! TRY AGAIN!'
+    puts 'I cannot take more caffeine! GIVE ME! TRY AGAIN!'
   end
 end
 
 class NotAFruitError < StandardError
   def message
-   'Not my type of fruit!'
+    puts 'Not my type of fruit!'
   end
 end
 
